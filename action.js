@@ -28,9 +28,9 @@ let config = {
 async function getRequest() {
 
   ////// LINE Notify に送る ////////////////////////
-
+  let responseLINENotify;
   try {
-    const responseLINENotify = await axios.request(config);
+    responseLINENotify = await axios.request(config);
     console.log(responseLINENotify.data);
   } catch (error) {
     console.error(error);
