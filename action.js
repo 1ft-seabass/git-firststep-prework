@@ -39,7 +39,8 @@ async function getRequest() {
   ////// データ保存 ////////////////////////
   const PATH = "./docs/apidata.json";  // ファイルの置き場所 // 事前にからファイルはコミットしておく
   console.log(responseLINENotify.data);
-  fs.writeFileSync(PATH, JSON.stringify(responseLINENotify.data));
+  let result = fs.writeFileSync(PATH, JSON.stringify(responseLINENotify.data));
+  console.log(result);
 
 }
 
