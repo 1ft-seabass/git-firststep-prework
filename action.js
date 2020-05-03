@@ -1,6 +1,9 @@
 const axios = require('axios');
 const qs = require('querystring');
 
+// ファイル更新するfsパッケージ
+const fs = require("fs");
+
 const LINE_NOTIFY_API_URL = 'https://notify-api.line.me/api/notify';
 
 // GitHub Actions で実行する際に Security 値 LINE_TOKEN を利用する
@@ -32,6 +35,10 @@ async function getRequest() {
   } catch (error) {
     console.error(error);
   }
+
+  ////// データ保存 ////////////////////////
+  const PATH = "./docs/apidata.json";  // ファイルの置き場所
+  fs.writeFileSync(PATH, JSON.stringify(responseLINENotify.data));
 
 }
 
