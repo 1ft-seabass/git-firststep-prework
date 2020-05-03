@@ -42,7 +42,7 @@ async function getRequest() {
   let result = fs.writeFileSync(PATH, JSON.stringify(responseLINENotify.data));
   console.log(result);
   console.log(responseLINENotify.data);
-  let result = fs.writeFileSync("./apidata.json", JSON.stringify(responseLINENotify.data));
+  result = fs.writeFileSync("./apidata.json", JSON.stringify(responseLINENotify.data));
   console.log(result);
 
 }
