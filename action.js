@@ -37,7 +37,7 @@ async function getRequest() {
   }
 
   ////// データ保存 ////////////////////////
-  const PATH = "./docs/apidata.json";  // ファイルの置き場所
+  const PATH = "./docs/apidata.json";  // ファイルの置き場所 // 事前にからファイルはコミットしておく
   fs.writeFileSync(PATH, JSON.stringify(responseLINENotify.data));
 
 }
