@@ -19,7 +19,8 @@ async function getRequest() {
     let unko = html.match(/id="mdServiceStatus">(.*?)<\/div>/)[1];
     unko = unko.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''); //整形2: タグを削除
     console.log(unko);
-    await updateData({msg: unko}); //データ更新関数を実行
+    let timestamp = new Date().getTime();  // Actions でうまく更新されるための時刻をつける
+    await updateData({msg: unko , timestamp: timestamp }); //データ更新関数を実行
   } catch (error) {
     console.error(error);
   }
