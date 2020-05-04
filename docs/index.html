@@ -4,5 +4,22 @@
   </head>
   <body>
     <p>Hello, ProtoOut!</p>
+
+    <div id="app">
+        {{ message }}
+        <a v-bind:href="url">vue link v-bind:href</a><!-- v-bindで指定できる -->
+        <a :href="url">vue link :href </a><!-- v-bindは : に省略もできる -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                url:'https://protoout.studio/'  // リンクのとび先の値
+            }
+        })
+    </script>
   </body>
 </html>
