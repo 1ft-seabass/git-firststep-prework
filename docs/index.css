@@ -1,0 +1,20 @@
+h1{
+    color:black;
+    width: 151px;
+        padding: 26px 0 0;
+        height: 0;
+    font-weight:bold;
+    font-style:nomal;
+    margin: auto;
+    
+    }
+    
+h2{
+    color:dimgray;
+    font-size: 30px;
+
+}
+
+.text_red {
+    color:red;
+}
