@@ -20,7 +20,7 @@
 
             methods: {
                 getData: async function(){
-                    const response = await axios.get('data.json')
+                    const response = await axios.get('http://weather.livedoor.com/forecast/webservice/json/v1?city=400040')
                     console.log(response.data);
                     this.message = response.data
                 },
